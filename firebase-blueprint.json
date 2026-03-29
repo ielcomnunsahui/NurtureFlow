@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "Nurse": {
+      "title": "Nurse",
+      "description": "A healthcare professional using the system.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["nurse", "admin"] }
+      },
+      "required": ["uid", "name", "email", "role"]
+    },
+    "Patient": {
+      "title": "Patient",
+      "description": "A patient registered in the family planning clinic.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "fullName": { "type": "string" },
+        "age": { "type": "integer" },
+        "address": { "type": "string" },
+        "phoneNumber": { "type": "string" },
+        "childrenCount": { "type": "integer" },
+        "fpHistory": { "type": "string" },
+        "lmp": { "type": "string", "format": "date" },
+        "lastSexualIntercourse": { "type": "string", "format": "date" },
+        "currentMethod": { "type": "string" },
+        "nextAppointmentDate": { "type": "string", "format": "date" },
+        "registeredBy": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["fullName", "age", "currentMethod", "nextAppointmentDate"]
+    }
+  },
+  "firestore": {
+    "/nurses/{nurseId}": {
+      "schema": "Nurse",
+      "description": "Nurse profiles."
+    },
+    "/patients/{patientId}": {
+      "schema": "Patient",
+      "description": "Patient records."
+    }
+  }
+}

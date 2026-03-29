@@ -1,0 +1,7 @@
+{
+  "name": "NurtureFlow",
+  "description": "A professional Family Planning Management System for nurses to track patient records, contraceptive use, and automated follow-up appointments.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
