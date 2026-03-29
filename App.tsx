@@ -26,10 +26,13 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const root = window.document.documentElement;
+    const body = window.document.body;
     if (theme === 'dark') {
       root.classList.add('dark');
+      body.classList.add('dark');
     } else {
       root.classList.remove('dark');
+      body.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
   }, [theme]);
@@ -99,7 +102,7 @@ const App: React.FC = () => {
             <div className="bg-emerald-600 p-2 rounded-lg">
               <Heart className="w-6 h-6 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">NurtureFlow</h1>
+            <h1 className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">FAMORA</h1>
           </div>
 
           <div className="flex items-center gap-6">
@@ -180,7 +183,7 @@ const App: React.FC = () => {
       <footer className="bg-white dark:bg-gray-900 border-t dark:border-gray-800 py-6 px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            &copy; 2026 NurtureFlow - AI-Powered Family Planning. Non-Diagnostic System.
+            &copy; 2026 FAMORA - AI-Powered Family Planning. Non-Diagnostic System.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-gray-400 hover:text-emerald-600">Privacy Policy</a>

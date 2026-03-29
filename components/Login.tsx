@@ -29,7 +29,7 @@ const Login: React.FC = () => {
           <div className="bg-white dark:bg-gray-100 p-3 rounded-2xl">
             <Heart className="w-10 h-10 text-emerald-600" />
           </div>
-          <h1 className="text-4xl font-bold tracking-tight">NurtureFlow</h1>
+          <h1 className="text-4xl font-bold tracking-tight">FAMORA</h1>
         </div>
         
         <h2 className="text-3xl md:text-5xl font-light mb-8 leading-tight">
